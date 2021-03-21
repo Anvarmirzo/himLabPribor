@@ -50,6 +50,14 @@
             padding-bottom: 18px;
             width: 100%;
 
+            @include block_991 {
+                width: 221px;
+                border-width: 0;
+                background-image: none;
+                color: #20252D;
+                background-color: #FFFFFF;
+            }
+
             img {
                 margin-right: 12px;
             }
@@ -60,12 +68,42 @@
         margin-top: 17px;
 
         @include block_991 {
-            display: none;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-image: radial-gradient(48.83% 78.14% at 67.46% 39.56%, #272E39 0%, #191D23 100%);
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        &.show-nav {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .burger-icon {
+            margin-right: 15px;
+
+            @include block_991 {
+                background-image: url('../img/dark-burger.svg');
+            }
         }
 
         &-menu {
             display: flex;
             align-items: center;
+
+            @include block_991 {
+                flex-direction: column;
+                margin-bottom: 20vh;
+            }
 
             li {
                 margin-right: 60px;
@@ -74,12 +112,26 @@
                     margin-right: 30px;
                 }
 
+                @include block_991 {
+                    margin-right: 0px;
+                    margin-bottom: 24px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
                 a {
                     position: relative;
                     font-weight: 500;
                     font-size: 16px;
                     line-height: 150%;
                     color: #3F4A5A;
+
+                    @include block_991 {
+                        font-size: 16px;
+                        color: #FFFFFF;
+                    }
 
                     &:hover {
                         &::before {
@@ -136,6 +188,7 @@
         @include block_480 {
             padding: 10px 10px 10px 31px;
             font-size: 13px;
+            border-width: 2px;
         }
 
         &::placeholder {
@@ -153,10 +206,19 @@
 
     &-wrapper {
         @include block_991 {
+            position: absolute;
+            bottom: 20px;
             display: flex;
             justify-content: center;
+            flex-direction: column;
             align-items: center;
         }
+    }
+}
+
+.sm-lang-btn {
+    @include block_991 {
+        margin-bottom: 24px;
     }
 }
 
@@ -167,6 +229,11 @@
     border-width: 0;
     background-color: transparent;
     max-width: 100%;
+    z-index: 2;
+
+    &:focus {
+        outline: none;
+    }
 
     img {
         height: 23px;
@@ -179,5 +246,13 @@
 
     @include block_991 {
         display: block;
+    }
+}
+
+.cat-burger-position {
+    @include block_991 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

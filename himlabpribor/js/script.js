@@ -1,3 +1,4 @@
+'use strict';
 /* function testWebP(callback) {
 
 var webP = new Image();
@@ -15,4 +16,21 @@ document.querySelector('body').classList.add('webp');
 document.querySelector('body').classList.add('no-webp');
 }
 });*/
-"use strict";
+
+function openNav() {
+  var openBurgerBtn = document.querySelector('.main-burger');
+  openBurgerBtn.addEventListener('click', function () {
+    var changeImg = document.querySelector('.main-burger source');
+    var nav = document.querySelector('.navigation-links');
+
+    if (changeImg.srcset == 'img/close-icon.svg') {
+      changeImg.srcset = 'img/dark-burger.svg';
+    } else {
+      changeImg.srcset = 'img/close-icon.svg';
+    }
+
+    nav.classList.toggle('show-nav');
+  });
+}
+
+openNav();

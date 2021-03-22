@@ -34,12 +34,17 @@
                 font-size: 16px;
                 line-height: 150%;
                 color: #3F4A5A;
+
+                @include block_991 {
+                    color: #FFFFFF;
+                }
             }
         }
     }
 
     &-cats {
         &-btn {
+            position: relative;
             background-image: linear-gradient(180deg, #154484 0%, #12396E 100%);
             border-radius: 2px;
             font-weight: 500;
@@ -49,6 +54,19 @@
             padding-top: 18px;
             padding-bottom: 18px;
             width: 100%;
+            border: none;
+
+            &:hover {
+                cursor: pointer;
+
+                .dropdown {
+                    display: block;
+                }
+
+                .dropdown_menu--animated {
+                    display: block;
+                }
+            }
 
             @include block_991 {
                 width: 221px;
@@ -56,6 +74,7 @@
                 background-image: none;
                 color: #20252D;
                 background-color: #FFFFFF;
+                margin-bottom: 68px;
             }
 
             img {
@@ -71,7 +90,7 @@
             margin: 0;
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
             background-image: radial-gradient(48.83% 78.14% at 67.46% 39.56%, #272E39 0%, #191D23 100%);
             position: fixed;
@@ -254,5 +273,144 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+}
+
+.dropdown {
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+    border-radius: 2px;
+    border: 2px solid #154484;
+    position: relative;
+    perspective: 1000px;
+    z-index: 100;
+
+    li {
+        border-bottom: 1px solid #D3D8DE;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        min-height: 42px;
+        text-align: left;
+    }
+
+    a {
+        font-size: 16px;
+        line-height: 150%;
+        color: #3F4A5A;
+        min-height: 42px;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+.dropdown:hover {
+    cursor: pointer;
+
+    .dropdown_menu-2 {
+        border: 2px solid #154484;
+    }
+}
+
+.dropdown:hover .dropdown_menu li {
+    display: flex;
+}
+
+.dropdown_menu {
+    position: absolute;
+    top: 100%;
+    left: -2px;
+    width: 400px;
+    max-width: 400px;
+    perspective: 1000px;
+    z-index: -1;
+
+    @include block_991 {
+        width: 100%;
+        left: 0;
+    }
+}
+
+.dropdown_menu li {
+    display: none;
+    opacity: 0;
+
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 10px;
+        content: '';
+        background-image: linear-gradient(180deg, #154484 0%, #12396E 100%);
+        opacity: 0;
+    }
+}
+
+.dropdown_menu li:hover {
+    &::before {
+        opacity: 1;
+
+        @include block_991 {
+            opacity: 0;
+        }
+    }
+}
+
+.dropdown:hover .dropdown_menu--animated {
+    display: block;
+}
+
+.dropdown_menu-2 {
+    border-radius: 2px;
+    border: 0px solid #154484;
+
+    @include block_991 {
+        background-color: #fff;
+        border-width: 0 !important;
+    }
+}
+
+.dropdown_menu-2 .dropdown_item-1 {
+    transform-origin: top center;
+    animation: rotateX 300ms 60ms ease-in-out forwards;
+}
+
+.dropdown_menu-2 .dropdown_item-2 {
+    transform-origin: top center;
+    animation: rotateX 300ms 120ms ease-in-out forwards;
+}
+
+.dropdown_menu-2 .dropdown_item-3 {
+    transform-origin: top center;
+    animation: rotateX 300ms 180ms ease-in-out forwards;
+}
+
+.dropdown_menu-2 .dropdown_item-4 {
+    transform-origin: top center;
+    animation: rotateX 300ms 240ms ease-in-out forwards;
+}
+
+.dropdown_menu-2 .dropdown_item-5 {
+    transform-origin: top center;
+    animation: rotateX 300ms 300ms ease-in-out forwards;
+}
+
+@keyframes rotateX {
+    0% {
+        opacity: 0;
+        transform: rotateX(-90deg);
+    }
+
+    50% {
+        transform: rotateX(-20deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg);
     }
 }

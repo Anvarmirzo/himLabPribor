@@ -1,0 +1,151 @@
+.footer {
+    background-image: radial-gradient(48.83% 78.14% at 67.46% 39.56%, #272E39 0%, #191D23 100%);
+    padding: 56px 0 20px;
+    color: #FFFFFF;
+
+    @include block_991 {
+        text-align: center;
+    }
+
+    .row {
+        align-items: baseline;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 140%;
+        color: #FFFFFF;
+        margin-bottom: 28px;
+
+        @include block_767 {
+            margin-top: 28px;
+        }
+    }
+
+    li {
+        a {
+            font-size: 16px;
+            line-height: 150%;
+            display: inline-block;
+
+            &[href^="tel:"] {
+                display: inline-block;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 140%;
+            }
+        }
+    }
+
+    &-menu {
+        li {
+            a {
+                margin-bottom: 12px;
+
+                &[href^="tel:"] {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+
+    .form {
+        &-wrapper {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            text-align: center;
+            padding: 59px 64px;
+
+            @include block_991 {
+                margin-top: 24px;
+                margin-bottom: 24px;
+            }
+
+            &-legend {
+                margin-bottom: 37px;
+
+                h4 {
+                    color: #fff;
+                    margin-bottom: 12px;
+                }
+
+                p {
+                    font-size: 16px;
+                    line-height: 150%;
+                }
+            }
+        }
+    }
+
+    &-form {
+        input:not(input[type="submit"]) {
+            padding: 16px;
+            margin-bottom: 10px;
+            background-color: transparent;
+            border: 2px solid #FFFFFF;
+            backdrop-filter: blur(38px);
+            border-radius: 2px;
+            width: 100%;
+            color: #FFFFFF;
+
+            &:focus {
+                outline: none;
+                box-shadow: 0px 0px 9px 2px #fff;
+            }
+
+            &::placeholder {
+                font-size: 16px;
+                line-height: 150%;
+                color: #FFFFFF;
+            }
+        }
+
+        input[type="submit"] {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            color: #243949;
+            padding: 18px 90px;
+            margin-top: 9px;
+            cursor: pointer;
+
+            @include block_1199 {
+                padding: 10px 20px;
+            }
+        }
+    }
+
+    hr {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    &-links {
+        margin-top: 17px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        @include block_991 {
+            justify-content: center;
+        }
+
+        li {
+            margin-right: 28px;
+        }
+    }
+
+    &-info {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-icons {
+        &>* {
+            margin-left: 20px;
+        }
+    }
+}

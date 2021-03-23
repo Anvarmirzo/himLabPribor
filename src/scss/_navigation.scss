@@ -100,6 +100,7 @@
             left: 0;
             opacity: 0;
             visibility: hidden;
+            z-index: 1;
         }
 
         &.show-nav {
@@ -199,6 +200,11 @@
         border-radius: 2px;
         padding: 24px 32px 24px 60px;
         width: 100%;
+
+        &:focus {
+            outline: 0;
+            box-shadow: 0px 0px 5px 0px #12396E;
+        }
 
         @include block_767 {
             padding: 15px 15px 15px 40px;
@@ -367,9 +373,9 @@
 .dropdown_menu-2 {
     border-radius: 2px;
     border: 0px solid #154484;
+    background-color: #fff;
 
     @include block_991 {
-        background-color: #fff;
         border-width: 0 !important;
     }
 }

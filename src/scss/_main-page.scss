@@ -1,0 +1,45 @@
+.main-page--bg {
+    background-image: url('../img/main-pag-bg.svg');
+}
+
+.main-header {
+    background-image: url('../img/header-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &-content {
+        padding-top: 140px;
+        padding-bottom: 186px;
+        color: #fff;
+        max-width: 583px;
+
+        h1 {
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 36px;
+            line-height: 140%;
+            letter-spacing: -2px;
+            margin-bottom: 74px;
+
+            @include block_767 {
+                font-size: 25px;
+            }
+        }
+
+        a {
+            display: inline-block;
+            padding: 17px 56px;
+            border: 3px solid #FFFFFF;
+            border-radius: 2px;
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 9px 2px #fff;
+            }
+        }
+    }
+}

@@ -726,7 +726,6 @@ h1 {
   font-weight: 600;
   font-size: 56px;
   line-height: 114%;
-  color: #000000;
 }
 
 h2 {
@@ -734,7 +733,6 @@ h2 {
   font-weight: 600;
   font-size: 48px;
   line-height: 116%;
-  color: #000000;
 }
 
 h3 {
@@ -742,7 +740,6 @@ h3 {
   font-weight: 600;
   font-size: 40px;
   line-height: 121%;
-  color: #000000;
 }
 
 h4 {
@@ -751,7 +748,6 @@ h4 {
   font-size: 32px;
   line-height: 125%;
   letter-spacing: -1px;
-  color: #000000;
 }
 
 h5 {
@@ -759,7 +755,6 @@ h5 {
   font-weight: 600;
   font-size: 24px;
   line-height: 133%;
-  color: #000000;
 }
 
 h6 {
@@ -767,7 +762,6 @@ h6 {
   font-weight: 600;
   font-size: 20px;
   line-height: 140%;
-  color: #000000;
 }
 
 p {
@@ -776,6 +770,7 @@ p {
 
 .navigation {
   padding-top: 22px;
+  padding-bottom: 20px;
 }
 
 .navigation--flex {
@@ -932,8 +927,8 @@ p {
 
 .search-wrapper input:focus {
   outline: 0;
-  -webkit-box-shadow: 0px 0px 5px 0px #12396E;
-  box-shadow: 0px 0px 5px 0px #12396E;
+  -webkit-box-shadow: 0px 0px 9px 2px #12396E;
+  box-shadow: 0px 0px 9px 2px #12396E;
 }
 
 .search-wrapper input::-webkit-input-placeholder {
@@ -1322,6 +1317,49 @@ p {
 
 .footer-icons > * {
   margin-left: 20px;
+}
+
+.main-page--bg {
+  background-image: url("../img/main-pag-bg.svg");
+}
+
+.main-header {
+  background-image: url("../img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.main-header-content {
+  padding-top: 140px;
+  padding-bottom: 186px;
+  color: #fff;
+  max-width: 583px;
+}
+
+.main-header-content h1 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.main-header-content p {
+  font-size: 36px;
+  line-height: 140%;
+  letter-spacing: -2px;
+  margin-bottom: 74px;
+}
+
+.main-header-content a {
+  display: inline-block;
+  padding: 17px 56px;
+  border: 3px solid #FFFFFF;
+  border-radius: 2px;
+}
+
+.main-header-content a:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 9px 2px #fff;
+  box-shadow: 0 0 9px 2px #fff;
 }
 
 @media (min-width: 576px) {
@@ -2018,12 +2056,20 @@ p {
     margin-top: 0 !important;
   }
 
+  h1 {
+    font-size: 39px;
+  }
+
   .search-wrapper input {
     padding: 15px 15px 15px 40px;
   }
 
   .footer h3 {
     margin-top: 28px;
+  }
+
+  .main-header-content p {
+    font-size: 25px;
   }
 }
 
@@ -2043,5 +2089,11 @@ p {
     padding: 10px 10px 10px 31px;
     font-size: 13px;
     border-width: 2px;
+  }
+}
+
+@media (max-width: 360px) {
+  h1 {
+    font-size: 32px;
   }
 }

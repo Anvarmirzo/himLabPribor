@@ -1276,7 +1276,7 @@ p {
   line-height: 150%;
 }
 
-.footer-form input:not(input[type="submit"]) {
+.footer-form input {
   padding: 16px;
   margin-bottom: 10px;
   background-color: transparent;
@@ -1288,37 +1288,37 @@ p {
   color: #FFFFFF;
 }
 
-.footer-form input:not(input[type="submit"]):focus {
+.footer-form input:focus {
   outline: none;
   -webkit-box-shadow: 0px 0px 9px 2px #fff;
   box-shadow: 0px 0px 9px 2px #fff;
 }
 
-.footer-form input:not(input[type="submit"])::-webkit-input-placeholder {
+.footer-form input::-webkit-input-placeholder {
   font-size: 16px;
   line-height: 150%;
   color: #FFFFFF;
 }
 
-.footer-form input:not(input[type="submit"])::-moz-placeholder {
+.footer-form input::-moz-placeholder {
   font-size: 16px;
   line-height: 150%;
   color: #FFFFFF;
 }
 
-.footer-form input:not(input[type="submit"]):-ms-input-placeholder {
+.footer-form input:-ms-input-placeholder {
   font-size: 16px;
   line-height: 150%;
   color: #FFFFFF;
 }
 
-.footer-form input:not(input[type="submit"])::-ms-input-placeholder {
+.footer-form input::-ms-input-placeholder {
   font-size: 16px;
   line-height: 150%;
   color: #FFFFFF;
 }
 
-.footer-form input:not(input[type="submit"])::placeholder {
+.footer-form input::placeholder {
   font-size: 16px;
   line-height: 150%;
   color: #FFFFFF;
@@ -1326,12 +1326,17 @@ p {
 
 .footer-form input[type="submit"] {
   font-weight: 500;
+  background-color: #FFFFFF;
+  -webkit-backdrop-filter: blur(38px);
+  backdrop-filter: blur(38px);
   font-size: 16px;
   line-height: 150%;
   color: #243949;
   padding: 18px 90px;
   margin-top: 9px;
   cursor: pointer;
+  margin-bottom: 0;
+  width: auto;
 }
 
 .footer hr {

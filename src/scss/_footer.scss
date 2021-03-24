@@ -79,7 +79,7 @@
     }
 
     &-form {
-        input:not(input[type="submit"]) {
+        input {
             padding: 16px;
             margin-bottom: 10px;
             background-color: transparent;
@@ -103,12 +103,16 @@
 
         input[type="submit"] {
             font-weight: 500;
+            background-color: #FFFFFF;
+            backdrop-filter: blur(38px);
             font-size: 16px;
             line-height: 150%;
             color: #243949;
             padding: 18px 90px;
             margin-top: 9px;
             cursor: pointer;
+            margin-bottom: 0;
+            width: auto;
 
             @include block_1199 {
                 padding: 10px 20px;

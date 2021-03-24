@@ -1,0 +1,25 @@
+.clients {
+    padding-top: 60px;
+    padding-bottom: 136px;
+
+    h3 {
+        color: #243949;
+    }
+
+    &-row {
+        align-items: center;
+        justify-content: space-between;
+
+        @include block_991 {
+            justify-content: flex-start;
+        }
+
+        @include block_767 {
+            text-align: center;
+        }
+
+        .col-lg-2 {
+            margin-bottom: 30px;
+        }
+    }
+}

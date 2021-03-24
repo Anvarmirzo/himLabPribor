@@ -18,6 +18,10 @@ h2 {
     font-weight: 600;
     font-size: 48px;
     line-height: 116%;
+
+    @include block_767 {
+        font-size: 36px;
+    }
 }
 
 h3 {
@@ -25,6 +29,10 @@ h3 {
     font-weight: 600;
     font-size: 40px;
     line-height: 121%;
+
+    @include block_767 {
+        font-size: 23px;
+    }
 }
 
 h4 {

@@ -1,0 +1,79 @@
+.contact-content {
+    background: #F7F7F7;
+    box-shadow: 6px 6px 15px rgba(227, 227, 227, 0.62);
+    border-radius: 2px;
+    margin-top: 60px;
+    margin-bottom: 75px;
+    padding: 50px;
+
+    @include block_767 {
+        text-align: center;
+    }
+
+    h6 {
+        font-family: 'Roboto';
+        font-weight: 700;
+        color: #172029;
+        margin-bottom: 12px;
+    }
+}
+
+.phones-menu {
+    margin-bottom: 20px;
+
+    li {
+        margin-bottom: 4px;
+
+        a {
+            font-size: 16px;
+            line-height: 150%;
+            color: #172029;
+        }
+    }
+}
+
+.icons-menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include block_767 {
+        justify-content: center;
+    }
+
+    li {
+        margin-right: 22px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.map-wrapper {
+    @include block_991 {
+        margin-top: 20px;
+    }
+
+    .map--hover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        top: 0;
+        background-image: linear-gradient(0deg, rgba(23, 32, 41, 0.5), rgba(23, 32, 41, 0.5)), url(.png);
+        border-radius: 2px;
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &:hover &--hover {
+        visibility: visible;
+        opacity: 1;
+        z-index: 2;
+    }
+}

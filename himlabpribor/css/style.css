@@ -736,6 +736,20 @@ html {
   background-image: url("../img/eye.svg");
 }
 
+.instagram-icon--black {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background-image: url("../img/instagram--black.svg");
+}
+
+.facebook-icon--black {
+  display: inline-block;
+  width: 17px;
+  height: 30px;
+  background-image: url("../img/facebook--black.svg");
+}
+
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -1744,6 +1758,86 @@ p {
   border-radius: 2px;
 }
 
+.contact-content {
+  background: #F7F7F7;
+  -webkit-box-shadow: 6px 6px 15px rgba(227, 227, 227, 0.62);
+  box-shadow: 6px 6px 15px rgba(227, 227, 227, 0.62);
+  border-radius: 2px;
+  margin-top: 60px;
+  margin-bottom: 75px;
+  padding: 50px;
+}
+
+.contact-content h6 {
+  font-family: 'Roboto';
+  font-weight: 700;
+  color: #172029;
+  margin-bottom: 12px;
+}
+
+.phones-menu {
+  margin-bottom: 20px;
+}
+
+.phones-menu li {
+  margin-bottom: 4px;
+}
+
+.phones-menu li a {
+  font-size: 16px;
+  line-height: 150%;
+  color: #172029;
+}
+
+.icons-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.icons-menu li {
+  margin-right: 22px;
+}
+
+.icons-menu li:last-child {
+  margin-right: 0;
+}
+
+.map-wrapper .map--hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(23, 32, 41, 0.5)), to(rgba(23, 32, 41, 0.5))), url(.png);
+  background-image: -o-linear-gradient(bottom, rgba(23, 32, 41, 0.5), rgba(23, 32, 41, 0.5)), url(.png);
+  background-image: linear-gradient(0deg, rgba(23, 32, 41, 0.5), rgba(23, 32, 41, 0.5)), url(.png);
+  border-radius: 2px;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.map-wrapper:hover .map-wrapper--hover {
+  visibility: visible;
+  opacity: 1;
+  z-index: 2;
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
@@ -2455,6 +2549,10 @@ p {
     -ms-flex-pack: start;
     justify-content: flex-start;
   }
+
+  .map-wrapper {
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -2488,6 +2586,16 @@ p {
 
   .clients-row {
     text-align: center;
+  }
+
+  .contact-content {
+    text-align: center;
+  }
+
+  .icons-menu {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 

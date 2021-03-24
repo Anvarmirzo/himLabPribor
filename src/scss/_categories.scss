@@ -12,6 +12,7 @@
         border-radius: 2px;
         padding: 20px 12px 34px;
         text-align: center;
+        height: 100%;
 
         img {
             margin: 0 auto 25px;
@@ -40,5 +41,13 @@
         &:hover a {
             transform: scale(1);
         }
+    }
+}
+
+.categories-page {
+    padding-bottom: 113px;
+
+    .col-lg-4 {
+        margin-bottom: 63px;
     }
 }

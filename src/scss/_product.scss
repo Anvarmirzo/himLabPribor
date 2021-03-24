@@ -66,9 +66,7 @@
 .techchar span.text {
     position: relative;
     margin-right: 7em;
-    /* Задается чтобы текст не заходил на номера страниц */
     padding-right: 2px;
-    /* Необязателен. Задается чтобы точки не подходили вплотную к концу текста */
 }
 
 .techchar span.page {
@@ -80,7 +78,6 @@
     position: absolute;
     right: 0;
     padding-left: 2px;
-    /* Необязателен. Задается чтобы точки не подходили вплотную к номерам страниц */
 }
 
 .float-start-wrapper {

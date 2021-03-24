@@ -1,0 +1,29 @@
+.sidebar {
+    h6 {
+        font-family: 'Roboto';
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 140%;
+        color: #20252D;
+        margin-bottom: 12px;
+    }
+
+    &-cats-menu {
+        padding: 25px 12px;
+        background-color: #F9F9F9;
+        box-shadow: 6px 6px 15px rgba(227, 227, 227, 0.62);
+        border-radius: 2px;
+        margin-bottom: 25px;
+
+        li {
+            border-bottom: 1px solid rgba(211, 216, 222, 1);
+            margin-bottom: 13px;
+
+            a {
+                font-size: 13px;
+                line-height: 153%;
+                color: #3F4A5A;
+            }
+        }
+    }
+}

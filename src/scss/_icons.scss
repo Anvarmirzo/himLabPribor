@@ -25,3 +25,22 @@
     height: 30px;
     background-image: url('../img/facebook--black.svg');
 }
+
+.arrow-left-icon {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-image: url('../img/arrow-left.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.arrow-right-icon {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-image: url('../img/arrow-left.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+}

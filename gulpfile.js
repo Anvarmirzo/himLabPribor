@@ -1,4 +1,5 @@
-let project_folder = require("path").basename(__dirname);
+// let project_folder = require("path").basename(__dirname);
+let project_folder = "himlabpribor";
 let source_folder = "src";
 
 let fs = require('fs');
@@ -10,6 +11,7 @@ let path = {
         js: project_folder + "/js/",
         img: project_folder + "/img/",
         fonts: project_folder + "/fonts/",
+        plugins: project_folder + "/plugins/"
     },
     src: {
         html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
@@ -17,12 +19,14 @@ let path = {
         js: source_folder + "/js/script.js",
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
         fonts: source_folder + "/fonts/*",
+        plugins: source_folder + "/plugins/**/*"
     },
     watch: {
         html: source_folder + "/**/*.html",
         css: source_folder + "/scss/**/*.scss",
         js: source_folder + "/js/**/*.js",
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+        plugins: source_folder + "/plugins/**/*"
     },
     clean: "./" + project_folder + "/"
 }
@@ -138,6 +142,12 @@ function images() {
         .pipe(browsersync.stream())
 }
 
+function plugins() {
+    return src(path.src.plugins)
+        .pipe(dest(path.build.plugins))
+        .pipe(browsersync.stream())
+}
+
 function fonts() {
     src(path.src.fonts)
         .pipe(ttf2woff())
@@ -198,16 +208,18 @@ function watchFiles() {
     gulp.watch([path.watch.css], css)
     gulp.watch([path.watch.js], js)
     gulp.watch([path.watch.img], images)
+    gulp.watch([path.watch.plugins], plugins)
 }
 
 function clean() {
     return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, plugins), fontsStyle);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fontsStyle = fontsStyle;
+exports.plugins = plugins;
 exports.fonts = fonts;
 exports.images = images;
 exports.js = js;

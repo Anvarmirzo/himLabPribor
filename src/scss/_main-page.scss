@@ -1,5 +1,9 @@
 .main-page--bg {
-    background-image: url('../img/main-pag-bg.svg');
+    background-image: url('../img/main-page-bg.svg');
+
+    .main-section-title {
+        margin-bottom: 50px;
+    }
 }
 
 .main-header {
@@ -41,5 +45,21 @@
                 box-shadow: 0 0 9px 2px #fff;
             }
         }
+    }
+}
+
+.main-section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #fff;
+
+    a {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 150%;
+        text-decoration-line: underline;
+        color: #DB524E;
     }
 }

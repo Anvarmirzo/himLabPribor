@@ -1,0 +1,117 @@
+.arrivals-slider {
+    .slider-item {
+        position: relative;
+        background: #F9F9F9;
+        box-shadow: 6px 6px 15px rgba(227, 227, 227, 0.62);
+        border-radius: 2px;
+        padding: 20px 10px 40px;
+        text-align: center;
+
+        .triangle-topright {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-top: 65px solid #DB524E;
+            border-left: 65px solid transparent;
+
+            &::before {
+                content: 'new';
+                position: absolute;
+                top: -55px;
+                left: -45px;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 140%;
+                color: #FFFFFF;
+                transform: rotate(45deg);
+                text-transform: uppercase;
+            }
+        }
+
+        img {
+            margin: 0 auto 35px;
+        }
+
+        &--hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            opacity: 0;
+            visibility: hidden;
+            z-index: -1;
+            background-image: radial-gradient(48.83% 78.14% at 67.46% 39.56%, rgba(39, 46, 57, 0.7) 0%, rgba(25, 29, 35, 0.7) 100%);
+            backdrop-filter: blur(1px);
+            border-radius: 2px;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 140%;
+            text-align: center;
+            color: #FFFFFF;
+
+            .eye-icon {
+                margin-bottom: 10px;
+            }
+        }
+
+        &:hover .slider-item--hover {
+            z-index: 2;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+
+
+    .slider-item--padding {
+        padding: 15px 20px 15px 10px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+        transform: translateY(-50%);
+        font-size: 0;
+        border: none;
+        background-color: transparent;
+
+        &.slick-prev {
+            left: -33px;
+            background-image: url('../img/arrow-left.svg');
+            height: 22px;
+            width: 14px;
+
+            @include custom-media(600px) {
+                top: auto;
+                bottom: -51px;
+                left: 40%;
+            }
+        }
+
+        &.slick-next {
+            right: -33px;
+            background-image: url('../img/arrow-left.svg');
+            transform: rotate(180deg);
+            height: 22px;
+            width: 14px;
+
+            @include custom-media(600px) {
+                top: auto;
+                bottom: -40px;
+                right: 40%;
+            }
+        }
+    }
+}

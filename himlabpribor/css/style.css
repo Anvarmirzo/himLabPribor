@@ -1360,6 +1360,10 @@ p {
   margin-right: 28px;
 }
 
+.footer-links li:last-child {
+  margin-right: 0;
+}
+
 .footer-info {
   display: -webkit-box;
   display: -ms-flexbox;

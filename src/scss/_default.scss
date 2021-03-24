@@ -1,0 +1,25 @@
+.default {
+    &-title {
+        color: #0F2C57;
+        margin-bottom: 50px;
+    }
+
+    &-content {
+        padding-bottom: 75px;
+
+        h6 {
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 150%;
+            color: #172029;
+        }
+
+        img {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}

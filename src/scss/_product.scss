@@ -1,0 +1,84 @@
+.product {
+    &-title {
+        color: #0F2C57;
+        margin-bottom: 20px;
+    }
+
+    &__manufactoring {
+        font-size: 13px;
+        line-height: 153%;
+
+        color: #172029;
+
+        span {
+            font-weight: 500;
+            color: #172029;
+        }
+    }
+
+    &-page-content {
+        padding-bottom: 75px;
+
+        h6 {
+            margin-top: 57px;
+            margin-bottom: 4px;
+            color: #172029;
+            font-weight: 700;
+        }
+
+        img {
+            float: right;
+        }
+
+        &-advantages {
+            list-style-type: disc;
+            margin-bottom: 20px;
+
+            li {
+                font-size: 16px;
+                line-height: 150%;
+                color: #172029;
+                margin-left: 18px;
+            }
+        }
+    }
+}
+
+.techchar {
+    background-color: #F9F9F9;
+    box-shadow: 6px 6px 15px rgba(227, 227, 227, 0.62);
+    border-radius: 2px;
+    padding: 25px 12px 23px;
+}
+
+.techchar li {
+    border-bottom: 1px solid rgba(211, 216, 222, 1);
+    position: relative;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 153%;
+    color: #3F4A5A;
+    list-style-type: none;
+}
+
+.techchar span.text {
+    position: relative;
+    margin-right: 7em;
+    /* Задается чтобы текст не заходил на номера страниц */
+    padding-right: 2px;
+    /* Необязателен. Задается чтобы точки не подходили вплотную к концу текста */
+}
+
+.techchar span.page {
+    font-size: 13px;
+    line-height: 153%;
+    text-align: right;
+    color: #3F4A5A;
+    font-weight: 400;
+    position: absolute;
+    right: 0;
+    padding-left: 2px;
+    /* Необязателен. Задается чтобы точки не подходили вплотную к номерам страниц */
+}

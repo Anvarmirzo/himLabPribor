@@ -1,0 +1,19 @@
+.catalog {
+    padding-bottom: 172px;
+
+    .row {
+        padding-top: 60px;
+    }
+
+    &-title {
+        h3 {
+            color: #0F2C57;
+        }
+    }
+
+    &-card {
+        background-color: #F9F9F9;
+        box-shadow: 6px 6px 15px rgba(227, 227, 227, 0.62);
+        border-radius: 2px
+    }
+}

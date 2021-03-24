@@ -1725,6 +1725,25 @@ p {
   margin-bottom: 20px;
 }
 
+.catalog {
+  padding-bottom: 172px;
+}
+
+.catalog .row {
+  padding-top: 60px;
+}
+
+.catalog-title h3 {
+  color: #0F2C57;
+}
+
+.catalog-card {
+  background-color: #F9F9F9;
+  -webkit-box-shadow: 6px 6px 15px rgba(227, 227, 227, 0.62);
+  box-shadow: 6px 6px 15px rgba(227, 227, 227, 0.62);
+  border-radius: 2px;
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;

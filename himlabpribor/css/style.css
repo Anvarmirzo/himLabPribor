@@ -1923,6 +1923,10 @@ p {
   /* Необязателен. Задается чтобы точки не подходили вплотную к номерам страниц */
 }
 
+.float-start-wrapper img {
+  float: left;
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;

@@ -1,10 +1,18 @@
 .default {
     &-title {
+        @include block_767 {
+            text-align: center;
+        }
+
         color: #0F2C57;
         margin-bottom: 50px;
     }
 
     &-content {
+        @include block_767 {
+            text-align: center;
+        }
+
         padding-bottom: 75px;
 
         h6 {

@@ -2182,6 +2182,10 @@ p {
   font-weight: 700;
 }
 
+.product-page-content p {
+  line-height: 1.5;
+}
+
 .product-page-content img {
   float: right;
 }
@@ -2199,6 +2203,7 @@ p {
 }
 
 .techchar {
+  text-align: left;
   background-color: #F9F9F9;
   -webkit-box-shadow: 6px 6px 15px rgba(227, 227, 227, 0.62);
   box-shadow: 6px 6px 15px rgba(227, 227, 227, 0.62);
@@ -3052,6 +3057,10 @@ p {
     margin-top: 0 !important;
   }
 
+  .page-title h2 {
+    text-align: center;
+  }
+
   h1 {
     font-size: 39px;
   }
@@ -3068,11 +3077,35 @@ p {
     margin-top: 28px;
   }
 
+  .main-header {
+    text-align: center;
+  }
+
   .main-header-content p {
     font-size: 25px;
   }
 
+  .main-section-title {
+    text-align: center;
+  }
+
+  .about-page-content {
+    text-align: center;
+  }
+
   .clients-row {
+    text-align: center;
+  }
+
+  .default-title {
+    text-align: center;
+  }
+
+  .default-content {
+    text-align: center;
+  }
+
+  .catalog-title {
     text-align: center;
   }
 
@@ -3084,6 +3117,18 @@ p {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+  }
+
+  .product-title {
+    text-align: center;
+  }
+
+  .product__manufactoring {
+    text-align: center;
+  }
+
+  .product-page-content h6 {
+    text-align: center;
   }
 }
 
@@ -3110,6 +3155,16 @@ p {
 @media (max-width: 480.98px) {
   .search-wrapper input {
     border-width: 2px;
+  }
+
+  .main-section-title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 

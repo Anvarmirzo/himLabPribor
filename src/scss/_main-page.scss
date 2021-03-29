@@ -98,7 +98,7 @@
         text-align: center;
     }
 
-    @include block_480 {
+    @include block_575 {
         flex-direction: column;
         justify-content: center;
     }
@@ -107,7 +107,7 @@
         font-weight: bold;
         font-size: 16px;
         line-height: 150%;
-        text-decoration-line: underline;
-        color: #DB524E;
+        text-decoration: underline;
+        color: #FFF;
     }
 }

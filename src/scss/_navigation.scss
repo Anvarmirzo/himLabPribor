@@ -76,7 +76,8 @@
             }
 
             @include block_991 {
-                width: 221px;
+                width: 80%;
+                outline: none;
                 border-width: 0;
                 background-image: none;
                 color: #20252D;
@@ -328,6 +329,10 @@
         display: flex;
         align-items: center;
         width: 100%;
+
+        @include block_991 {
+            justify-content: center;
+        }
     }
 }
 
@@ -337,6 +342,8 @@
 
 .dropdown:hover .dropdown_menu li {
     display: flex;
+
+
 }
 
 .dropdown_menu {
@@ -351,6 +358,7 @@
     @include block_991 {
         width: 100%;
         left: 0;
+        max-width: 100%;
     }
 }
 
@@ -403,6 +411,11 @@
     border-left: 2px solid #12396E;
     border-right: 2px solid#12396E;
     border-top: 2px solid#12396E;
+
+    @include block_991 {
+        border-left-width: 0;
+        border-right-width: 0;
+    }
 }
 
 .dropdown_menu-2 .dropdown_item-2 {
@@ -411,6 +424,11 @@
     background-color: #fff;
     border-left: 2px solid #12396E;
     border-right: 2px solid #12396E;
+
+    @include block_991 {
+        border-left-width: 0;
+        border-right-width: 0;
+    }
 }
 
 .dropdown_menu-2 .dropdown_item-3 {
@@ -419,6 +437,11 @@
     background-color: #fff;
     border-left: 2px solid #12396E;
     border-right: 2px solid #12396E;
+
+    @include block_991 {
+        border-left-width: 0;
+        border-right-width: 0;
+    }
 }
 
 .dropdown_menu-2 .dropdown_item-4 {
@@ -427,6 +450,11 @@
     background-color: #fff;
     border-left: 2px solid #12396E;
     border-right: 2px solid #12396E;
+
+    @include block_991 {
+        border-left-width: 0;
+        border-right-width: 0;
+    }
 }
 
 .dropdown_menu-2 .dropdown_item-5 {
@@ -436,6 +464,11 @@
     border-left: 2px solid #12396E;
     border-right: 2px solid #12396E;
     border-bottom: 2px solid #12396E;
+
+    @include block_991 {
+        border-left-width: 0;
+        border-right-width: 0;
+    }
 }
 
 @keyframes rotateX {

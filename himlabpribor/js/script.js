@@ -25,8 +25,10 @@ $(function () {
 
       if (changeImg.srcset == 'img/close-icon.svg') {
         changeImg.srcset = 'img/dark-burger.svg';
+        document.body.style.overflow = "auto";
       } else {
         changeImg.srcset = 'img/close-icon.svg';
+        document.body.style.overflow = "hidden";
       }
 
       nav.classList.toggle('show-nav');
@@ -61,4 +63,69 @@ $(function () {
       }
     }]
   });
+  $(".button_su_inner").mouseenter(function (e) {
+    var parentOffset = $(this).offset();
+    var relX = e.pageX - parentOffset.left;
+    var relY = e.pageY - parentOffset.top;
+    $(this).prev(".su_button_circle").css({
+      "left": relX,
+      "top": relY
+    });
+    $(this).prev(".su_button_circle").removeClass("desplode-circle");
+    $(this).prev(".su_button_circle").addClass("explode-circle");
+  });
+  $(".button_su_inner").mouseleave(function (e) {
+    var parentOffset = $(this).offset();
+    var relX = e.pageX - parentOffset.left;
+    var relY = e.pageY - parentOffset.top;
+    $(this).prev(".su_button_circle").css({
+      "left": relX,
+      "top": relY
+    });
+    $(this).prev(".su_button_circle").removeClass("explode-circle");
+    $(this).prev(".su_button_circle").addClass("desplode-circle");
+  });
+
+  function showMap() {
+    var mapBtn = document.querySelector('.map-wrapper');
+    var map = document.querySelector('.modal-map');
+    var mapLayer = document.querySelector('.modal-layer');
+
+    if (mapBtn) {
+      mapBtn.addEventListener('click', function () {
+        map.classList.add('show-map');
+        mapLayer.classList.add('show-map');
+        document.body.style.overflow = "hidden";
+      });
+      mapLayer.addEventListener('click', function () {
+        map.classList.remove('show-map');
+        mapLayer.classList.remove('show-map');
+        document.body.style.overflow = "auto";
+      });
+    }
+  }
+
+  showMap();
+
+  function showSearch() {
+    var searchBtn = document.querySelector('.open-search');
+    var searchInput = document.querySelector('.search-wrapper input');
+    var searchLayer = document.querySelector('.search-layer');
+    var startSearch = document.querySelector('.start-search');
+    var closeSearch = document.querySelector('.search-close-btn');
+    searchBtn.addEventListener('click', function () {
+      searchInput.classList.add('d-block');
+      searchLayer.classList.add('show-search');
+      startSearch.classList.add('show-search');
+      closeSearch.classList.add('show-search');
+    });
+    closeSearch.addEventListener('click', function () {
+      searchInput.classList.remove('d-block');
+      searchLayer.classList.remove('show-search');
+      startSearch.classList.remove('show-search');
+      closeSearch.classList.remove('show-search');
+    });
+  }
+
+  showSearch();
 });

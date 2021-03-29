@@ -53,11 +53,11 @@ html {
   }
 }
 
-@media (min-width: 1520px) {
+/* @media (min-width: 1520px) {
   .container {
     max-width: 1480px;
   }
-}
+} */
 
 .container-fluid {
   width: 100%;
@@ -692,7 +692,7 @@ html {
   }
 }
 
-@media (min-width: 1520px) {
+/* @media (min-width: 1520px) {
   .col-xxl {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -793,6 +793,6 @@ html {
     flex: 0 0 100%;
     max-width: 100%;
   }
-}
+} */
 
 /*# sourceMappingURL=custom-grid.css.map */

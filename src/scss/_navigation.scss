@@ -2,6 +2,12 @@
     padding-top: 22px;
     padding-bottom: 20px;
 
+    .row {
+        @include block_575 {
+            margin-right: 0;
+        }
+    }
+
     &--flex {
         display: flex;
         align-items: center;
@@ -107,6 +113,7 @@
         &.show-nav {
             opacity: 1;
             visibility: visible;
+            z-index: 2;
         }
 
         .burger-icon {
@@ -191,8 +198,8 @@
         width: 16px;
         height: 16px;
 
-        @include block_480 {
-            left: 26px;
+        @include block_991 {
+            display: none;
         }
     }
 
@@ -207,13 +214,23 @@
             box-shadow: 0px 0px 9px 2px #12396E;
         }
 
-        @include block_767 {
-            padding: 15px 15px 15px 40px;
+        @include block_991 {
+            display: none;
+            padding: 15px;
+            z-index: 220;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%);
+            width: 75%;
+
+            &.d-block {
+                display: block;
+            }
         }
 
         @include block_480 {
-            padding: 10px 10px 10px 31px;
-            font-size: 13px;
+            // font-size: 13px;
             border-width: 2px;
         }
 
@@ -261,7 +278,7 @@
     border-width: 0;
     background-color: transparent;
     max-width: 100%;
-    z-index: 2;
+    z-index: 3;
 
     &:focus {
         outline: none;
@@ -269,11 +286,6 @@
 
     img {
         height: 23px;
-
-        @include block_575 {
-            height: auto;
-            min-height: 15px;
-        }
     }
 
     @include block_991 {
@@ -321,10 +333,6 @@
 
 .dropdown:hover {
     cursor: pointer;
-
-    .dropdown_menu-2 {
-        border: 2px solid #154484;
-    }
 }
 
 .dropdown:hover .dropdown_menu li {
@@ -379,8 +387,9 @@
 
 .dropdown_menu-2 {
     border-radius: 2px;
-    border: 0px solid #154484;
-    background-color: #fff;
+    border: 0px;
+    background-color: transparent;
+    transition: 1s all;
 
     @include block_991 {
         border-width: 0 !important;
@@ -390,26 +399,43 @@
 .dropdown_menu-2 .dropdown_item-1 {
     transform-origin: top center;
     animation: rotateX 300ms 60ms ease-in-out forwards;
+    background-color: #fff;
+    border-left: 2px solid #12396E;
+    border-right: 2px solid#12396E;
+    border-top: 2px solid#12396E;
 }
 
 .dropdown_menu-2 .dropdown_item-2 {
     transform-origin: top center;
     animation: rotateX 300ms 120ms ease-in-out forwards;
+    background-color: #fff;
+    border-left: 2px solid #12396E;
+    border-right: 2px solid #12396E;
 }
 
 .dropdown_menu-2 .dropdown_item-3 {
     transform-origin: top center;
     animation: rotateX 300ms 180ms ease-in-out forwards;
+    background-color: #fff;
+    border-left: 2px solid #12396E;
+    border-right: 2px solid #12396E;
 }
 
 .dropdown_menu-2 .dropdown_item-4 {
     transform-origin: top center;
     animation: rotateX 300ms 240ms ease-in-out forwards;
+    background-color: #fff;
+    border-left: 2px solid #12396E;
+    border-right: 2px solid #12396E;
 }
 
 .dropdown_menu-2 .dropdown_item-5 {
     transform-origin: top center;
     animation: rotateX 300ms 300ms ease-in-out forwards;
+    background-color: #fff;
+    border-left: 2px solid #12396E;
+    border-right: 2px solid #12396E;
+    border-bottom: 2px solid #12396E;
 }
 
 @keyframes rotateX {
@@ -425,5 +451,74 @@
     100% {
         opacity: 1;
         transform: rotateX(0deg);
+    }
+}
+
+.open-search {
+    border: none;
+    background-color: transparent;
+    display: none;
+    cursor: pointer;
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
+
+    @include block_991 {
+        display: block;
+        margin-left: auto;
+    }
+
+}
+
+.search-layer {
+    display: none;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 199;
+    background-color: #020c1b;
+
+    &.show-search {
+        display: block;
+    }
+}
+
+.start-search {
+    display: none;
+    z-index: 220;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    width: 15%;
+    max-width: 50px;
+    height: 50px;
+    transform: translate(-50%);
+
+    &.show-search {
+        display: block;
+    }
+}
+
+.search-close-btn {
+    display: none;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 35px;
+    height: 35px;
+    z-index: 999;
+    background-color: transparent;
+    border-width: 0;
+
+    &.show-search {
+        display: block;
+    }
+
+    img {
+        width: 100%;
     }
 }

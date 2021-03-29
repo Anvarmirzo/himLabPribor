@@ -13,18 +13,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
-    @media (min-width:1470px) {
-        background-position: 0px -171px;
-    }
-
-    @media (min-width:1630px) {
-        background-position: 0px -235px;
-    }
-
-    @media (min-width:1770px) {
-        background-position: 0px -295px;
-    }
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
 
     &-content {
         padding-top: 140px;

@@ -5,8 +5,10 @@ function openNav() {
         const nav = document.querySelector('.navigation-links');
         if (changeImg.srcset == 'img/close-icon.svg') {
             changeImg.srcset = 'img/dark-burger.svg';
+            document.body.style.overflow = "auto";
         } else {
             changeImg.srcset = 'img/close-icon.svg';
+            document.body.style.overflow = "hidden";
         }
         nav.classList.toggle('show-nav');
     });

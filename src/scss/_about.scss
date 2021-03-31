@@ -34,11 +34,16 @@
         background-color: #F7F7F7;
         box-shadow: 6px 6px 15px rgba(227, 227, 227, 0.62);
         border-radius: 2px;
-        padding: 75px 50px;
+        padding: 50px 20px;
         color: #172029;
+
 
         @include block_767 {
             text-align: center;
+        }
+
+        @include block_575 {
+            width: 90%;
         }
 
         h3 {

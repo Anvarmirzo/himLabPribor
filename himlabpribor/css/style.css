@@ -2655,6 +2655,15 @@ p {
   }
 }
 
+.clients-slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .categories {
   padding-top: 60px;
   padding-bottom: 90px;
@@ -2756,13 +2765,19 @@ p {
   -webkit-box-shadow: 6px 6px 15px rgba(227, 227, 227, 0.62);
   box-shadow: 6px 6px 15px rgba(227, 227, 227, 0.62);
   border-radius: 2px;
-  padding: 75px 50px;
+  padding: 50px 20px;
   color: #172029;
 }
 
 @media (max-width: 767.98px) {
   .about-page-content {
     text-align: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about-page-content {
+    width: 90%;
   }
 }
 
@@ -2778,7 +2793,7 @@ p {
 
 .clients {
   padding-top: 60px;
-  padding-bottom: 136px;
+  padding-bottom: 90px;
 }
 
 .clients h3 {
@@ -2804,7 +2819,7 @@ p {
 
 @media (max-width: 767.98px) {
   .clients-row {
-    text-align: center;
+    text-align: cent er;
   }
 }
 
@@ -2941,12 +2956,16 @@ p {
   border-radius: 2px;
   margin-top: 60px;
   margin-bottom: 75px;
-  padding: 50px;
+  padding: 50px 20px;
 }
 
 @media (max-width: 767.98px) {
   .contact-content {
     text-align: center;
+    margin-top: 30px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

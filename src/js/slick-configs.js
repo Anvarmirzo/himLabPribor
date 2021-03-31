@@ -60,3 +60,40 @@ $('.categories-slider').slick({
         }
     ]
 });
+$('.clients-slider').slick({
+    infinite: true,
+    slidesToShow: 5,
+    cssEase: 'linear',
+    draggable: false,
+    autoplay: true,
+    speed: 9000,
+    autoplaySpeed: 0,
+    dots: false,
+    arrows: false,
+    responsive: [
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 4,
+            },
+        },
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3,
+            },
+        },
+        {
+            breakpoint: 766,
+            settings: {
+                slidesToShow: 2,
+            },
+        },
+        {
+            breakpoint: 500,
+            settings: {
+                slidesToShow: 1,
+            },
+        },
+    ],
+});

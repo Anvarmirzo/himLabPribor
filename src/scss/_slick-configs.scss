@@ -115,3 +115,87 @@
         }
     }
 }
+
+.categories-slider {
+    .slider-item--padding {
+        outline: none;
+        padding: 15px 22px 23px 8px;
+
+        .slick-arrow {
+            position: absolute;
+            top: 50%;
+            z-index: 1;
+            transform: translateY(-50%);
+            font-size: 0;
+            border: none;
+            background-color: transparent;
+
+            &.slick-prev {
+                left: -33px;
+                background-image: url('../img/arrow-left.svg');
+                height: 22px;
+                width: 14px;
+
+                @include custom-media(600px) {
+                    top: auto;
+                    bottom: -51px;
+                    left: 40%;
+                }
+            }
+
+            &.slick-next {
+                right: -33px;
+                background-image: url('../img/arrow-left.svg');
+                transform: rotate(180deg);
+                height: 22px;
+                width: 14px;
+
+                @include custom-media(600px) {
+                    top: auto;
+                    bottom: -40px;
+                    right: 40%;
+                }
+            }
+        }
+
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+        transform: translateY(-50%);
+        font-size: 0;
+        border: none;
+        background-color: transparent;
+
+        &.slick-prev {
+            left: -33px;
+            background-image: url('../img/arrow-left.svg');
+            height: 22px;
+            width: 14px;
+
+            @include custom-media(600px) {
+                top: auto;
+                bottom: -51px;
+                left: 40%;
+            }
+        }
+
+        &.slick-next {
+            right: -33px;
+            background-image: url('../img/arrow-left.svg');
+            transform: rotate(180deg);
+            height: 22px;
+            width: 14px;
+
+            @include custom-media(600px) {
+                top: auto;
+                bottom: -40px;
+                right: 40%;
+            }
+        }
+    }
+}

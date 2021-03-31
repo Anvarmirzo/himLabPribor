@@ -6,6 +6,41 @@
     .main-section-title {
         margin-bottom: 50px;
     }
+
+    h3 {
+        color: #FFFFFF;
+        margin-bottom: 30px;
+    }
+
+    .new-products__link {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 150%;
+        text-decoration: underline;
+        color: #FFF;
+        margin-left: 6px;
+        margin-top: 30px;
+
+        @include block_767 {
+            display: block;
+            width: max-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.slick-arrow {
+    outline: none;
+
+    &:hover {
+        cursor: pointer !important;
+    }
 }
 
 .main-header {
@@ -87,27 +122,12 @@
     }
 }
 
-.main-section-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    color: #fff;
 
-    @include block_767 {
-        text-align: center;
-    }
+@include block_767 {
+    text-align: center;
+}
 
-    @include block_575 {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    a {
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 150%;
-        text-decoration: underline;
-        color: #FFF;
-    }
+@include block_575 {
+    flex-direction: column;
+    justify-content: center;
 }

@@ -842,6 +842,10 @@ html {
   background-image: url("../img/burger-icon.svg");
 }
 
+.burger-icon.dark {
+  background-image: url(../img/dark-burger.svg);
+}
+
 .eye-icon {
   display: inline-block;
   width: 33px;

@@ -49,13 +49,28 @@
 }
 
 .main-header {
-    background-image: url('../img/header-bg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(0deg, rgba(41, 99, 132, 0.42), rgba(41, 99, 132, 0.42));
+    backdrop-filter: blur(9px);
+
+    &--bg {
+        background-image: url('../img/mani-header-bg.jpg');
+        background-repeat: no-repeat;
+        background-position: -135px -36px;
+        background-size: 165%;
+
+        @include block_767 {
+            background-position: center center;
+            background-size: cover;
+        }
+
+        @media (min-width: 1420px) {
+            background-size: 130%;
+            background-position: -10px -20px;
+        }
+    }
 
     &__container {
-        height: 90vh;
+        height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: center;

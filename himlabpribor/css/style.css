@@ -2316,16 +2316,26 @@ p {
 .product__manufactoring {
   font-size: 13px;
   line-height: 153%;
-  color: #172029;
+  color: #fff;
+  margin-bottom: 50px;
 }
 
 .product__manufactoring span {
   font-weight: 500;
-  color: #172029;
+  color: #fff;
+  margin-right: 12px;
 }
 
 .product-page-content {
   padding-bottom: 75px;
+}
+
+.product-page-content-wrapper {
+  background-color: #F7F7F7;
+  -webkit-box-shadow: 6px 6px 15px rgba(227, 227, 227, 0.62);
+  box-shadow: 6px 6px 15px rgba(227, 227, 227, 0.62);
+  border-radius: 2px;
+  padding: 50px;
 }
 
 .product-page-content h6 {

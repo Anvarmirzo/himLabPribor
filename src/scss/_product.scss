@@ -12,7 +12,8 @@
     &__manufactoring {
         font-size: 13px;
         line-height: 153%;
-        color: #172029;
+        color: #fff;
+        margin-bottom: 50px;
 
         @include block_767 {
             text-align: center;
@@ -21,12 +22,20 @@
 
         span {
             font-weight: 500;
-            color: #172029;
+            color: #fff;
+            margin-right: 12px;
         }
     }
 
     &-page-content {
         padding-bottom: 75px;
+
+        &-wrapper {
+            background-color: #F7F7F7;
+            box-shadow: 6px 6px 15px rgba(227, 227, 227, 0.62);
+            border-radius: 2px;
+            padding: 50px;
+        }
 
         h6 {
             margin-top: 57px;

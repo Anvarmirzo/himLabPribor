@@ -465,6 +465,7 @@ img {
 
 .page-title h2 {
   margin-bottom: 60px;
+  color: #fff;
 }
 
 .t-center {
@@ -2050,6 +2051,10 @@ p {
   font-size: 16px;
   line-height: 150%;
   color: #000000;
+}
+
+.about-page h3 {
+  color: #172029;
 }
 
 .clients {

@@ -73,6 +73,7 @@ img {
 .page-title {
     h2 {
         margin-bottom: 60px;
+        color: #fff;
 
         @include block_767 {
             text-align: center;

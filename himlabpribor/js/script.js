@@ -111,14 +111,29 @@ $(function () {
         slidesToShow: 3
       }
     }, {
-      breakpoint: 766,
+      breakpoint: 780,
       settings: {
-        slidesToShow: 2
+        draggable: false
+      }
+    }, {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 3,
+        autoplay: true,
+        speed: 800,
+        autoplaySpeed: 2000,
+        draggable: true,
+        touchThreshold: 10
       }
     }, {
       breakpoint: 500,
       settings: {
-        slidesToShow: 1
+        slidesToShow: 1,
+        autoplay: true,
+        speed: 800,
+        autoplaySpeed: 2000,
+        draggable: true,
+        touchThreshold: 10
       }
     }]
   });

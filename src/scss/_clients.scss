@@ -2,8 +2,20 @@
     padding-top: 60px;
     padding-bottom: 90px;
 
+    @include block_767 {
+        padding-right: 15px;
+        padding-left: 15px;
+        text-align: center;
+    }
+
     h3 {
         color: #243949;
+    }
+
+    &-slider__slide {
+        display: flex !important;
+        justify-content: center;
+        text-align: center;
     }
 
     &-row {

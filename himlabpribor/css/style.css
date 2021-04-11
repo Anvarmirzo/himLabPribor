@@ -2033,6 +2033,16 @@ p {
   color: #243949;
 }
 
+.clients-slider__slide {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .clients-row {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3252,6 +3262,12 @@ p {
     text-align: center;
   }
 
+  .clients {
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: center;
+  }
+
   .clients-row {
     text-align: cent er;
   }
@@ -3296,6 +3312,10 @@ p {
 }
 
 @media (max-width: 600px) {
+  .main-page--bg .new-products__link {
+    margin-top: 80px;
+  }
+
   .arrivals-slider .slick-arrow.slick-prev {
     top: auto;
     bottom: -51px;
@@ -3336,10 +3356,6 @@ p {
 @media (max-width: 575.98px) {
   .navigation .row {
     margin-right: 0;
-  }
-
-  .main-page--bg .new-products__link {
-    margin-top: 80px;
   }
 
   .main-header {
